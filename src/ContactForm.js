@@ -50,10 +50,14 @@ function ContactForm() {
                     </div>
 
                     <div>
-                        <label htmlFor="message">Message:</label>
-                        <Field as="textarea" id="message" name="message"
-                               onChange={handleChange('message')} value={form.message}/>
-                        <ErrorMessage name="message" component="div" />
+                        <label htmlFor="message">Пол:</label>
+                        <Field as="select" id="message" name="message"
+                               onChange={handleChange('sexsual')} value={form.sexsual}>
+                            <option value="">Не выбранно</option>
+                            <option value="мужской">мужской</option>
+                            <option value="женский">женский</option>
+                        </Field>
+                        <ErrorMessage name="sexsual" component="div" />
                     </div>
                     <button type="submit" disabled={isSubmitting}>
                         Submit

@@ -6,6 +6,7 @@ export const formSlice = createSlice({
         name: '',
         email: '',
         message: '',
+        sexsual: '',
         errors: {},
     },
     reducers: {
